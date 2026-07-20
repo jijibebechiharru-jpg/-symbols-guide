@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>DM用表紙バナー</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .banner {
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(160deg, #fff0ec 0%, #fde4dc 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    overflow: hidden;
+  }
+  /* 内側の白フレーム */
+  .frame {
+    position: absolute;
+    inset: 44px;
+    background: rgba(255,255,255,0.75);
+    border: 2px solid #e8c4ba;
+    border-radius: 28px;
+  }
+  .content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 30px;
+    letter-spacing: 0.25em;
+    color: #c98a7d;
+    border-top: 2px solid #e0b0a3;
+    border-bottom: 2px solid #e0b0a3;
+    padding: 14px 40px;
+    margin-bottom: 52px;
+    font-weight: 500;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 78px;
+    font-weight: 700;
+    color: #8a5a4e;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin: 0 0 30px;
+  }
+  h1 .small {
+    display: block;
+    font-size: 46px;
+    font-weight: 600;
+    color: #a3776b;
+    margin-bottom: 14px;
+  }
+  .palette {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin: 48px 0 56px;
+  }
+  .palette span {
+    width: 74px; height: 74px;
+    border-radius: 50%;
+    box-shadow: inset 0 -8px 14px rgba(0,0,0,0.07), 0 4px 10px rgba(180,120,105,0.18);
+  }
+  .gift {
+    display: inline-block;
+    background: linear-gradient(135deg, #e8a99a, #d98d7c);
+    color: #fff;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 26px 72px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(217,141,124,0.4);
+  }
+  .sub {
+    margin-top: 44px;
+    font-size: 30px;
+    color: #7d6f6a;
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="frame"></div>
+    <div class="content">
+      <span class="eyebrow">ご登録ありがとうございます</span>
+      <h1>
+        <span class="small">AIでできる</span>
+        パーソナルカラー診断
+      </h1>
+      <div class="palette">
+        <span style="background:#f5c9c0"></span>
+        <span style="background:#e8d5b5"></span>
+        <span style="background:#c9d8c5"></span>
+        <span style="background:#b8c9d9"></span>
+        <span style="background:#d9c2d5"></span>
+      </div>
+      <div class="gift">指示文をプレゼント</div>
+      <p class="sub">写真1枚で、似合う色がわかります</p>
+    </div>
+  </div>
+</body>
+</html>

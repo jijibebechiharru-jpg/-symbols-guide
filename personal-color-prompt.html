@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パーソナルカラー診断シート 指示文プレゼント</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background: #fff0ec;
+    color: #4a4341;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 20px 72px;
+  }
+
+  /* ===== ヘッダー ===== */
+  .hero {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .hero .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: #c98a7d;
+    border-top: 1px solid #e8c4ba;
+    border-bottom: 1px solid #e8c4ba;
+    padding: 6px 18px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #8a5a4e;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+  .hero p.sub {
+    margin-top: 14px;
+    font-size: 14.5px;
+    color: #7d6f6a;
+  }
+
+  /* パレット飾り */
+  .palette {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .palette span {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.06);
+  }
+
+  /* ===== セクション共通 ===== */
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(180,120,105,0.08);
+  }
+  .card h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #8a5a4e;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #f0d5cd;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== 使い方ステップ ===== */
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .step:last-child { margin-bottom: 0; }
+  .step .num {
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #f6ddd6;
+    color: #8a5a4e;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .step .txt { font-size: 14.5px; padding-top: 3px; }
+  .step .txt strong { color: #8a5a4e; }
+
+  /* ===== 指示文ボックス ===== */
+  .prompt-box {
+    background: #fdf7f5;
+    border: 1.5px solid #f0d5cd;
+    border-radius: 14px;
+    padding: 22px 18px;
+    font-size: 13.5px;
+    line-height: 1.85;
+    white-space: pre-wrap;
+    color: #5a4f4a;
+  }
+
+  .copy-btn {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #e8a99a, #d98d7c);
+    color: #fff;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(217,141,124,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .copy-btn:active { transform: scale(0.98); }
+  .copy-btn.done {
+    background: linear-gradient(135deg, #b9d8b0, #9cc492);
+    box-shadow: 0 4px 14px rgba(156,196,146,0.35);
+  }
+
+  /* ===== ポイント ===== */
+  .tips { list-style: none; }
+  .tips li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    font-size: 14.5px;
+  }
+  .tips li:last-child { margin-bottom: 0; }
+  .tips li::before {
+    content: "♡";
+    position: absolute;
+    left: 0; top: 0;
+    color: #d98d7c;
+  }
+
+  /* ===== アレンジ集 ===== */
+  .arrange h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #8a5a4e;
+    margin: 26px 0 10px;
+  }
+  .arrange h3:first-of-type { margin-top: 0; }
+  .arrange .note {
+    background: #fdf2ee;
+    border-left: 4px solid #e8a99a;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: #7d5a50;
+    margin-bottom: 22px;
+  }
+  .arrange .copy-btn { margin-top: 12px; margin-bottom: 4px; }
+
+  /* ===== 締め ===== */
+  .outro {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .outro p {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: #8a5a4e;
+    line-height: 2.1;
+  }
+  .outro .sign {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #b09a92;
+    letter-spacing: 0.12em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">ご登録ありがとうございます</span>
+    <h1>AIでできる<br>パーソナルカラー診断シート<br>指示文プレゼント</h1>
+    <p class="sub">写真を1枚用意するだけで、<br>あなたに似合う色がわかる診断シートが作れます。</p>
+    <div class="palette">
+      <span style="background:#f5c9c0"></span>
+      <span style="background:#e8d5b5"></span>
+      <span style="background:#c9d8c5"></span>
+      <span style="background:#b8c9d9"></span>
+      <span style="background:#d9c2d5"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>使い方は3ステップ</h2>
+    <div class="step">
+      <div class="num">1</div>
+      <div class="txt">下の<strong>「指示文をコピーする」</strong>ボタンを押します。</div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="txt">Claude(クロード)を開いて、<strong>自分の顔写真を1枚添付</strong>します。<br><span style="font-size:13px;color:#9a8a84">※自然光で撮った、すっぴん〜薄めメイクの写真がおすすめです。</span></div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="txt">コピーした指示文を<strong>貼り付けて送信</strong>。あとは待つだけです。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>プレゼントの指示文はこちら</h2>
+    <div class="prompt-box" id="promptText">あなたはプロのパーソナルカラーアナリストです。
+添付した写真を分析し、以下の条件に従って、高級感があり、かつ直感的にわかりやすい「パーソナルカラー診断シート」のインフォグラフィック画像を作成してください。
+
+【分析条件】
+1. 写真から肌・髪・瞳の色とコントラスト、血色感を分析し、最も可能性の高いパーソナルカラーを1つ、セカンドを1つ提案すること。
+2. 診断の根拠(なぜそのカラーなのか)を言語化すること。
+3. 実際に買い物で使えるレベルの情報をまとめること。
+
+【出力項目】
+- 診断結果:1stシーズン、2ndシーズン
+- 診断の根拠:肌トーン(イエローベース/ブルーベース)、明度、彩度、コントラスト
+- 似合う色:6色をHEXコード付きで提示
+- 苦手な色:3色をHEXコード付きで提示
+- おすすめ:ベストヘアカラー、ベストメイク、アクセサリー(ゴールド/シルバー)、ファッション系統
+
+【画像生成の指示】
+- 上記の情報を整理した、見やすくおしゃれな「診断シート風」の画像を生成してください。
+- 診断タイプ、似合う色、避けたい色、メイク、アクセサリー、ファッションの方向性が、ひと目でわかるように整理してください。
+- インスタグラムの投稿画像として使えるよう、清潔感のある淡い色使い(アイボリー、グレージュ、ペールピンク等)で統一してください。
+- 文字は読みやすく、かつデザイン性を重視してください。</div>
+    <button class="copy-btn" onclick="copyText('promptText', this)">指示文をコピーする</button>
+  </div>
+
+  <div class="card">
+    <h2>きれいに診断してもらうコツ</h2>
+    <ul class="tips">
+      <li>写真は<strong>明るい窓際</strong>で、正面から撮るのがおすすめです。</li>
+      <li>カラーコンタクトや強いフィルターは外しておくと、より正確になります。</li>
+      <li>結果が「ちょっと違うかも?」と思ったら、別の写真でもう一度試してみてね。</li>
+      <li>AIの診断は<strong>あくまで参考</strong>です。お買い物のヒントとして楽しんでください。</li>
+    </ul>
+  </div>
+
+  <div class="card arrange">
+    <h2>もっと楽しむアレンジ集</h2>
+    <div class="note">
+      アレンジの指示文は、診断をした<strong>同じチャットの中で続けて</strong>送ってください。<br>
+      新しいチャットだと、AIが診断結果を覚えていないので使えません。
+    </div>
+
+    <h3>① 手持ちの服チェック</h3>
+    <div class="prompt-box" id="arrange1">続けてお願いします。
+手持ちの服の写真を添付します。
+先ほどの診断結果をふまえて、この服が私に似合うかどうか、
+「似合う度(5段階)」と「似合わせるコツ(小物や合わせ方)」を教えてください。</div>
+    <button class="copy-btn" onclick="copyText('arrange1', this)">この指示文をコピーする</button>
+    <p style="font-size:13px;color:#9a8a84;margin-top:6px;">※服の写真も、明るい場所で撮るときれいに判定できます。</p>
+
+    <h3>② お買い物メモ版</h3>
+    <div class="prompt-box" id="arrange2">続けてお願いします。
+先ほどの診断結果をもとに、お店で店員さんに伝えられる言葉で
+「似合う色の伝え方メモ」を作ってください。
+例:「黄みのある明るいベージュ」のように、色の名前を日常の言葉で書いてください。
+トップス・ボトムス・羽織りものの3つに分けてまとめてください。</div>
+    <button class="copy-btn" onclick="copyText('arrange2', this)">この指示文をコピーする</button>
+
+    <h3>③ 大人のヘアカラー相談</h3>
+    <div class="prompt-box" id="arrange3">続けてお願いします。
+先ほどの診断結果をもとに、白髪が気になり始めた年代でも
+きれいに見えるヘアカラーを3つ提案してください。
+それぞれ「明るさの目安」と「美容室での伝え方」もつけてください。</div>
+    <button class="copy-btn" onclick="copyText('arrange3', this)">この指示文をコピーする</button>
+  </div>
+
+  <div class="outro">
+    <p>似合う色を知ることは、<br>自分の可能性を広げる第一歩。<br>まずは気軽に試してみてくださいね。</p>
+    <p class="sign">— ちはる —</p>
+  </div>
+
+  <a href="https://sub.aione.co.jp/line/open/bOyKWKY2Yi1o?mtid=pTIqYzfeyaet" style="display:block;margin-top:36px;">
+    <img src="line-cta.png" alt="LINE公式アカウント 友だち追加" style="width:100%;display:block;border-radius:18px;">
+  </a>
+
+</div>
+
+<script>
+function copyText(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    const original = btn.textContent;
+    btn.textContent = 'コピーできました ✓';
+    btn.classList.add('done');
+    setTimeout(function() {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 2500);
+  });
+}
+</script>
+</body>
+</html>
