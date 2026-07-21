@@ -178,28 +178,52 @@
 
   /* ===== 締め ===== */
   .message-card {
-    background: #fff;
+    background: linear-gradient(160deg, #fdf0ec 0%, #fbe3db 100%);
     border-radius: 18px;
-    padding: 34px 28px;
+    padding: 38px 28px;
     margin-top: 36px;
-    border: 1.5px solid #f0d5cd;
+    border: 1.5px solid #eab8a9;
+    box-shadow: 0 6px 20px rgba(200,130,110,0.12);
   }
   .message-card h3 {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     color: #8a5a4e;
     text-align: center;
-    margin-bottom: 22px;
-    letter-spacing: 0.04em;
+    margin-bottom: 26px;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .message-card h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e8a99a, #d98d7c);
+    border-radius: 2px;
   }
   .message-card p {
-    font-size: 14px;
+    font-size: 14.5px;
     color: #5a4f4a;
-    line-height: 2.05;
+    line-height: 2.1;
     margin-bottom: 18px;
   }
   .message-card p:last-of-type { margin-bottom: 0; }
+  .message-card strong {
+    color: #b8634f;
+    font-weight: 700;
+  }
+  .message-card .mark {
+    background: linear-gradient(transparent 62%, #f6c9ba 62%);
+    font-weight: 700;
+    color: #7a4a3e;
+    padding: 0 2px;
+  }
   .outro {
     text-align: center;
     margin-top: 40px;
@@ -319,14 +343,16 @@
   <div class="message-card">
     <h3>今だからこそ、伝えたいこと</h3>
     <p>AIは、難しい人だけのものではありません。<br>
-    私自身、63歳になってから少しずつ使い方を覚えて、暮らしの選択肢が広がっていくのを実感しています。</p>
+    美容師として<strong>43年</strong>、多くの方の「変わりたい」を見てきた私自身が、<strong>63歳になってから</strong>少しずつ使い方を覚えて、<span class="mark">暮らしの選択肢</span>が広がっていくのを実感しています。</p>
     <p>時代は、思っているよりずっと早く変わっています。<br>
-    知っているかどうかで、これからの毎日の景色が——そして収入の形さえも——変わっていく。そんな時代に、私たちは立っています。</p>
-    <p>新しい収入源を持つことは、決して特別なことではありません。<br>
+    知っているかどうかで、これからの毎日の景色が——そして<span class="mark">収入の形</span>さえも——変わっていく。そんな時代に、私たちは立っています。</p>
+    <p><span class="mark">今、知って動く人</span>と、知らずに時間だけが過ぎていく人。<br>
+    その差は、思っている以上に大きくなっていきます。</p>
+    <p><strong>新しい収入源を持つこと</strong>は、決して特別なことではありません。<br>
     年齢に関係なく、今の暮らしに合わせて考えていいことだと、私は思っています。</p>
-    <p>だからこそ、まずは知るところから。<br>
+    <p>だからこそ、まずは<strong>知るところから</strong>。<br>
     一歩踏み出したあなたに、新しい景色が見えてきますように。</p>
-    <p>同世代のみなさんが、今よりもっとはつらつと、自分らしく輝けますように。<br>
+    <p>同世代のみなさんが、今よりもっと<span class="mark">はつらつと、自分らしく</span>輝けますように。<br>
     そんな思いで、この情報をお届けしています。</p>
   </div>
 
