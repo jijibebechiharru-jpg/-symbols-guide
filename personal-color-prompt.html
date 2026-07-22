@@ -11,7 +11,7 @@
   body {
     font-family: 'Zen Maru Gothic', sans-serif;
     background: #fff0ec;
-    color: #3d3532;
+    color: #2e2622;
     font-weight: 500;
     line-height: 1.9;
     -webkit-font-smoothing: antialiased;
@@ -30,27 +30,28 @@
   }
   .hero .eyebrow {
     display: inline-block;
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    color: #c98a7d;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #b8634f;
     border-top: 1px solid #e8c4ba;
     border-bottom: 1px solid #e8c4ba;
-    padding: 6px 18px;
+    padding: 7px 18px;
     margin-bottom: 18px;
   }
   .hero h1 {
     font-family: 'Shippori Mincho', serif;
-    font-size: 26px;
-    font-weight: 600;
-    color: #8a5a4e;
-    letter-spacing: 0.06em;
-    line-height: 1.6;
+    font-size: 30px;
+    font-weight: 700;
+    color: #7a4a3e;
+    letter-spacing: 0.05em;
+    line-height: 1.55;
   }
   .hero p.sub {
-    margin-top: 14px;
-    font-size: 16.5px;
+    margin-top: 16px;
+    font-size: 18px;
     font-weight: 500;
-    color: #6b5b55;
+    color: #4a3934;
     line-height: 1.8;
   }
 
@@ -77,13 +78,13 @@
   }
   .card h2 {
     font-family: 'Shippori Mincho', serif;
-    font-size: 19px;
-    font-weight: 600;
-    color: #8a5a4e;
-    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #7a4a3e;
+    margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px dotted #f0d5cd;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
 
   /* ===== 使い方ステップ ===== */
@@ -91,23 +92,23 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .step:last-child { margin-bottom: 0; }
   .step .num {
     flex-shrink: 0;
-    width: 34px; height: 34px;
+    width: 38px; height: 38px;
     border-radius: 50%;
     background: #f6ddd6;
-    color: #8a5a4e;
+    color: #7a4a3e;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 17px;
   }
-  .step .txt { font-size: 16.5px; font-weight: 500; padding-top: 3px; line-height: 1.8; }
-  .step .txt strong { color: #8a5a4e; font-weight: 700; }
+  .step .txt { font-size: 18px; font-weight: 500; padding-top: 4px; line-height: 1.85; color: #2e2622; }
+  .step .txt strong { color: #7a4a3e; font-weight: 700; }
 
   /* ===== 指示文ボックス ===== */
   .prompt-box {
@@ -115,23 +116,24 @@
     border: 1.5px solid #f0d5cd;
     border-radius: 14px;
     padding: 22px 18px;
-    font-size: 13.5px;
-    line-height: 1.85;
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.95;
     white-space: pre-wrap;
-    color: #5a4f4a;
+    color: #3d3532;
   }
 
   .copy-btn {
     display: block;
     width: 100%;
     margin-top: 18px;
-    padding: 16px;
+    padding: 17px;
     border: none;
     border-radius: 999px;
     background: linear-gradient(135deg, #e8a99a, #d98d7c);
     color: #fff;
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.08em;
     cursor: pointer;
@@ -148,11 +150,12 @@
   .tips { list-style: none; }
   .tips li {
     position: relative;
-    padding-left: 26px;
-    margin-bottom: 14px;
-    font-size: 16.5px;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.85;
+    color: #2e2622;
   }
   .tips li:last-child { margin-bottom: 0; }
   .tips li::before {
@@ -164,44 +167,43 @@
 
   /* ===== アレンジ集 ===== */
   .arrange h3 {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 700;
-    color: #8a5a4e;
-    margin: 26px 0 10px;
+    color: #7a4a3e;
+    margin: 28px 0 12px;
   }
   .arrange h3:first-of-type { margin-top: 0; }
   .arrange .note {
     background: #fdf2ee;
     border-left: 4px solid #e8a99a;
     border-radius: 0 10px 10px 0;
-    padding: 14px 16px;
-    font-size: 15.5px;
+    padding: 15px 16px;
+    font-size: 17px;
     font-weight: 500;
-    color: #6b4238;
-    line-height: 1.85;
+    color: #5c342a;
+    line-height: 1.9;
     margin-bottom: 22px;
   }
   .arrange .copy-btn { margin-top: 12px; margin-bottom: 4px; }
 
   /* ===== 締め ===== */
   .message-card {
-    background: linear-gradient(160deg, #fdf0ec 0%, #fbe3db 100%);
+    background: #ffffff;
     border-radius: 18px;
-    padding: 38px 28px;
+    padding: 38px 26px;
     margin-top: 36px;
-    border: 1.5px solid #eab8a9;
-    box-shadow: 0 6px 20px rgba(200,130,110,0.12);
+    box-shadow: 0 4px 18px rgba(180,120,105,0.08);
   }
   .message-card h3 {
     font-family: 'Shippori Mincho', serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
-    color: #8a5a4e;
+    color: #7a4a3e;
     text-align: center;
     margin-bottom: 26px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     position: relative;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
   }
   .message-card h3::after {
     content: "";
@@ -209,26 +211,27 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 120px;
     height: 3px;
     background: linear-gradient(90deg, #e8a99a, #d98d7c);
     border-radius: 2px;
   }
   .message-card p {
-    font-size: 17.5px;
-    color: #4a3934;
-    line-height: 2.15;
+    font-size: 19px;
+    font-weight: 500;
+    color: #2e2622;
+    line-height: 2.05;
     margin-bottom: 22px;
   }
   .message-card p:last-of-type { margin-bottom: 0; }
   .message-card strong {
-    color: #b8634f;
+    color: #a8492f;
     font-weight: 700;
   }
   .message-card .mark {
-    background: linear-gradient(transparent 62%, #f6c9ba 62%);
+    background: linear-gradient(transparent 58%, #f6ceba 58%);
     font-weight: 700;
-    color: #7a4a3e;
+    color: #6b3222;
     padding: 0 2px;
   }
   .outro {
@@ -237,15 +240,16 @@
   }
   .outro p {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: #8a5a4e;
-    line-height: 2.1;
+    color: #7a4a3e;
+    line-height: 2.05;
   }
   .outro .sign {
     margin-top: 18px;
-    font-size: 13px;
-    color: #b09a92;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a17e73;
     letter-spacing: 0.12em;
   }
 </style>
