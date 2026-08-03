@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
     --bg-top:#fff6f3;
@@ -17,14 +18,21 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html,body{
-    width:1080px;
     background:var(--bg-top);
     font-family:"Noto Sans CJK JP","Noto Sans JP",sans-serif;
     color:var(--text-main);
   }
   body{
+    max-width:1080px;
+    width:100%;
+    margin:0 auto;
     background:linear-gradient(180deg,var(--bg-top) 0%, var(--bg-bottom) 100%);
     padding:44px 44px 40px 44px;
+  }
+  @media (max-width:640px){
+    body{
+      padding:28px 22px 26px 22px;
+    }
   }
 
   /* ---------- Header ---------- */
