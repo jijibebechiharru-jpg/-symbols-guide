@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語を活かして始められる海外のお仕事3選</title>
+<style>
+  :root{
+    --salmon:#fff0ec;
+    --salmon-deep:#ff8a70;
+    --salmon-line:#ffcabb;
+    --turquoise:#0fa3a3;
+    --turquoise-bg:#e6f7f6;
+    --ink:#2f2a28;
+    --ink-soft:#4a4340;
+    --card-bg:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--salmon);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    color:var(--ink);
+    line-height:1.9;
+  }
+  .wrap{
+    max-width:480px;
+    margin:0 auto;
+    padding:28px 20px 60px;
+  }
+  .hero{
+    text-align:center;
+    padding:36px 12px 28px;
+  }
+  .hero .eyebrow{
+    display:inline-block;
+    background:var(--salmon-deep);
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    padding:6px 16px;
+    border-radius:999px;
+    margin-bottom:18px;
+    letter-spacing:.05em;
+  }
+  .hero h1{
+    font-size:26px;
+    font-weight:700;
+    line-height:1.6;
+    margin:0 0 10px;
+    color:var(--ink);
+  }
+  .hero .sub{
+    font-size:16px;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .lead-box{
+    background:var(--card-bg);
+    border-radius:20px;
+    padding:26px 22px;
+    margin:22px 0;
+    box-shadow:0 4px 16px rgba(255,138,112,.10);
+  }
+  .lead-box p{
+    font-size:17px;
+    font-weight:500;
+    margin:0 0 12px;
+  }
+  .lead-box p:last-child{margin-bottom:0;}
+  .highlight{
+    color:var(--salmon-deep);
+    font-weight:700;
+  }
+  .underline{
+    text-decoration:underline;
+    text-decoration-color:var(--salmon-deep);
+    text-decoration-thickness:3px;
+    text-underline-offset:3px;
+    font-weight:700;
+  }
+  section{margin:40px 0;}
+  h2.section-title{
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+    margin:0 0 20px;
+    line-height:1.6;
+  }
+  h2.section-title .small{
+    display:block;
+    font-size:14px;
+    color:var(--turquoise);
+    font-weight:700;
+    margin-bottom:6px;
+    letter-spacing:.05em;
+  }
+  .plain-card{
+    background:var(--card-bg);
+    border-radius:20px;
+    padding:24px 20px;
+    margin-bottom:14px;
+  }
+  .plain-card p{
+    font-size:16.5px;
+    font-weight:500;
+    margin:0 0 10px;
+  }
+  .plain-card p:last-child{margin-bottom:0;}
+  .plain-card ul{
+    margin:10px 0 0;
+    padding-left:0;
+    list-style:none;
+  }
+  .plain-card li{
+    font-size:16.5px;
+    font-weight:500;
+    padding:8px 0 8px 26px;
+    position:relative;
+    border-bottom:1px dashed var(--salmon-line);
+  }
+  .plain-card li:last-child{border-bottom:none;}
+  .plain-card li::before{
+    content:"・";
+    position:absolute;
+    left:0;
+    color:var(--salmon-deep);
+    font-weight:700;
+  }
+
+  /* Job cards */
+  .job-card{
+    background:var(--card-bg);
+    border:2px solid var(--salmon-line);
+    border-radius:22px;
+    padding:26px 22px;
+    margin-bottom:22px;
+    box-shadow:0 4px 14px rgba(255,138,112,.08);
+  }
+  .job-num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    background:var(--salmon-deep);
+    color:#fff;
+    font-weight:700;
+    font-size:16px;
+    border-radius:50%;
+    margin-bottom:12px;
+  }
+  .job-card h3{
+    font-size:19px;
+    font-weight:700;
+    margin:0 0 12px;
+    line-height:1.6;
+  }
+  .job-card p{
+    font-size:16.5px;
+    font-weight:500;
+    margin:0 0 12px;
+  }
+  .job-card .work-label{
+    font-size:14px;
+    font-weight:700;
+    color:var(--turquoise);
+    margin:14px 0 6px;
+  }
+  .job-card ul{
+    margin:0 0 14px;
+    padding-left:0;
+    list-style:none;
+  }
+  .job-card li{
+    font-size:16.5px;
+    font-weight:500;
+    padding:6px 0 6px 24px;
+    position:relative;
+  }
+  .job-card li::before{
+    content:"○";
+    position:absolute;
+    left:0;
+    color:var(--salmon-deep);
+    font-size:13px;
+    top:9px;
+  }
+  .reward{
+    background:var(--turquoise-bg);
+    border-radius:14px;
+    padding:12px 16px;
+    font-size:15.5px;
+    font-weight:700;
+    color:var(--turquoise);
+    display:inline-block;
+    margin-top:4px;
+  }
+
+  /* Search box */
+  .search-box{
+    background:var(--turquoise-bg);
+    border:2px dashed var(--turquoise);
+    border-radius:18px;
+    padding:22px 20px;
+  }
+  .search-box .note{
+    font-size:16px;
+    font-weight:500;
+    margin:0 0 14px;
+    color:var(--ink-soft);
+  }
+  .search-box .term{
+    background:#fff;
+    border-radius:12px;
+    padding:12px 16px;
+    font-size:16px;
+    font-weight:700;
+    color:var(--turquoise);
+    margin-bottom:10px;
+    font-family:"Courier New",monospace;
+    letter-spacing:.01em;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    user-select:all;
+    transition:background .15s ease;
+  }
+  .search-box .term:active{
+    background:var(--turquoise-bg);
+  }
+  .search-box .term .copy-badge{
+    flex-shrink:0;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    color:#fff;
+    background:var(--turquoise);
+    padding:5px 10px;
+    border-radius:999px;
+    letter-spacing:.02em;
+  }
+  .search-box .term.copied .copy-badge{
+    background:var(--salmon-deep);
+  }
+  .search-box .term:last-child{margin-bottom:0;}
+
+  /* Steps */
+  .step{
+    display:flex;
+    gap:16px;
+    margin-bottom:22px;
+    position:relative;
+  }
+  .step:last-child{margin-bottom:0;}
+  .step-marker{
+    flex-shrink:0;
+    width:56px;
+    text-align:center;
+  }
+  .step-marker .circle{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--salmon-deep);
+    color:#fff;
+    font-weight:700;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto;
+  }
+  .step-line{
+    width:2px;
+    background:var(--salmon-line);
+    flex:1;
+    margin:6px auto 0;
+  }
+  .step-content{
+    background:var(--card-bg);
+    border-radius:16px;
+    padding:16px 18px;
+    flex:1;
+  }
+  .step-content h4{
+    font-size:17px;
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  .step-content p{
+    font-size:16px;
+    font-weight:500;
+    margin:0;
+    color:var(--ink-soft);
+  }
+
+  /* Checklist */
+  .checklist{
+    background:var(--turquoise-bg);
+    border-radius:20px;
+    padding:24px 20px;
+  }
+  .checklist ul{
+    margin:0 0 16px;
+    padding:0;
+    list-style:none;
+  }
+  .checklist li{
+    font-size:16.5px;
+    font-weight:600;
+    padding:10px 0 10px 34px;
+    position:relative;
+    border-bottom:1px solid #ffffff;
+  }
+  .checklist li:last-child{border-bottom:none;}
+  .checklist li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:10px;
+    color:var(--turquoise);
+    font-weight:700;
+    font-size:18px;
+  }
+  .caution{
+    font-size:15.5px;
+    font-weight:600;
+    color:#c0392b;
+    background:#fff;
+    border-radius:12px;
+    padding:14px 16px;
+    margin:0;
+  }
+
+  /* Final summary */
+  .final-box{
+    background:var(--card-bg);
+    border:3px solid var(--salmon-deep);
+    border-radius:24px;
+    padding:30px 22px;
+    text-align:center;
+  }
+  .final-box h3{
+    font-size:20px;
+    font-weight:700;
+    margin:0 0 16px;
+    color:var(--salmon-deep);
+    line-height:1.6;
+  }
+  .final-box p{
+    font-size:16.5px;
+    font-weight:500;
+    margin:0 0 14px;
+    text-align:left;
+  }
+  .final-box p:last-of-type{margin-bottom:0;}
+
+  .disclaimer{
+    font-size:13px;
+    color:#9a938f;
+    font-weight:500;
+    text-align:left;
+    margin-top:22px;
+    line-height:1.8;
+  }
+
+  .divider{
+    width:60px;
+    height:4px;
+    background:var(--salmon-line);
+    border-radius:2px;
+    margin:0 auto 30px;
+  }
+
+  .upwork-link{
+    display:inline-block;
+    vertical-align:middle;
+    line-height:0;
+  }
+  .upwork-logo{
+    height:28px;
+    width:auto;
+    vertical-align:middle;
+    transition:opacity .15s ease;
+  }
+  .upwork-link:hover .upwork-logo,
+  .upwork-link:active .upwork-logo{
+    opacity:.75;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">DMでのお問い合わせありがとうございます</span>
+    <h1>日本語を活かして<br>始められる<br>海外のお仕事<span class="highlight">3選</span></h1>
+    <p class="sub">資格や英語力に自信がなくても、<br>知ることから始めてみませんか</p>
+  </div>
+
+  <div class="lead-box">
+    <p>こんなふうに思っていませんか？</p>
+    <p>在宅でできる仕事には興味がある。<br>でも、特別な資格やスキルはないし、<br>英語が苦手だから難しそう……。</p>
+    <p>実は海外には、<span class="underline">普段使っている日本語を活かして</span>応募できる仕事があります。</p>
+    <p>音声を録音したり、自然な会話をしたり、AIが作った日本語に違和感がないか確認したり。</p>
+    <p>日本語を自然に使えること自体が、<span class="highlight">ひとつの強み</span>になる仕事です。</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="section-title">
+      <span class="small">なぜ日本語を使う仕事があるの？</span>
+      AIだけでは補えない部分があるから
+    </h2>
+    <div class="plain-card">
+      <p>AIは文章や翻訳を作れるようになりましたが、</p>
+      <ul>
+        <li>日本語として自然か</li>
+        <li>違和感がないか</li>
+        <li>読みやすい文章になっているか</li>
+        <li>正しく聞き取れる音声か</li>
+      </ul>
+      <p>といった確認には、<span class="underline">日本語を普段から使っている人の感覚</span>が必要です。</p>
+      <p>そのため海外の仕事サイトでは、音声録音・会話録音・日本語の文章確認などの案件が募集されています。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <span class="small">日本語を活かせる仕事</span>
+      3つのお仕事をご紹介します
+    </h2>
+
+    <div class="job-card">
+      <span class="job-num">1</span>
+      <h3>短文読み上げ・音声録音</h3>
+      <p>指定された日本語の文章や短いフレーズを、スマートフォンのアプリなどを使って読み上げ、録音する仕事です。</p>
+      <div class="work-label">主な作業</div>
+      <ul>
+        <li>指定された日本語を読む</li>
+        <li>音声を録音する</li>
+        <li>指定された方法で提出する</li>
+      </ul>
+      <p>静かな録音環境や、自然ではっきりとした日本語が求められます。</p>
+      <span class="reward">報酬イメージ：2,000円相当の案件など</span>
+    </div>
+
+    <div class="job-card">
+      <span class="job-num">2</span>
+      <h3>日本語の会話・雑談録音</h3>
+      <p>決められたテーマについて日本語で会話し、その音声を録音する仕事です。</p>
+      <div class="work-label">主な作業</div>
+      <ul>
+        <li>指定されたテーマについて話す</li>
+        <li>専用アプリで会話を録音する</li>
+        <li>録音データを提出する</li>
+      </ul>
+      <p>海外の学生と日本語で会話する仕事のほか、AIの学習データを作るために、日本人同士の自然な会話を録音する案件もあります。募集によっては、会話相手が必要です。</p>
+      <span class="reward">報酬イメージ：3,000円相当の案件など</span>
+    </div>
+
+    <div class="job-card">
+      <span class="job-num">3</span>
+      <h3>日本語の文章チェック</h3>
+      <p>AIや翻訳ツールが作成した日本語を読み、不自然な表現や間違いがないか確認する仕事です。</p>
+      <div class="work-label">主な作業</div>
+      <ul>
+        <li>不自然な日本語を見つける</li>
+        <li>誤字や脱字を確認する</li>
+        <li>自然な文章に修正する</li>
+        <li>AIが作った文章や回答を評価する</li>
+      </ul>
+      <p>案件によっては、文章力や簡単な英語の確認が必要になる場合もあります。</p>
+      <span class="reward">報酬イメージ：5,000円相当の案件など</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <span class="small">仕事はどこで探すの？</span>
+      海外の仕事サイト「<a class="upwork-link" href="https://www.upwork.com/" target="_blank" rel="noopener"><img class="upwork-logo" src="data:image/png;base64,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" alt="Upwork"></a>」
+    </h2>
+    <div class="plain-card">
+      <p><a href="https://www.upwork.com/" target="_blank" rel="noopener" style="color:inherit;font-weight:700;text-decoration:underline;text-decoration-color:var(--salmon-deep);">Upwork</a>は、海外の企業や依頼者が募集している仕事を探し、自分から応募できる仕事サイトです。</p>
+      <p>サイトや募集文は英語で表示されることが多いですが、<span class="underline">ブラウザの翻訳機能やChatGPT</span>を使いながら確認できます。</p>
+    </div>
+    <div class="search-box">
+      <p class="note">検索ワード例（タップでコピーできます）</p>
+      <div class="term" onclick="copyTerm(this)"><span>Japanese voice recording</span><span class="copy-badge">コピー</span></div>
+      <div class="term" onclick="copyTerm(this)"><span>Native Japanese</span><span class="copy-badge">コピー</span></div>
+      <div class="term" onclick="copyTerm(this)"><span>Japanese conversation recording</span><span class="copy-badge">コピー</span></div>
+      <div class="term" onclick="copyTerm(this)"><span>Japanese proofreading</span><span class="copy-badge">コピー</span></div>
+      <div class="term" onclick="copyTerm(this)"><span>Japanese text review</span><span class="copy-badge">コピー</span></div>
+      <div class="term" onclick="copyTerm(this)"><span>Japanese evaluator</span><span class="copy-badge">コピー</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <span class="small">はじめの一歩</span>
+      仕事を始める流れ
+    </h2>
+    <div class="step">
+      <div class="step-marker">
+        <div class="circle">STEP<br>1</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <h4><a href="https://www.upwork.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-color:var(--salmon-deep);">Upwork</a>に登録する</h4>
+        <p>フリーランサーとしてアカウントを作成します。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">
+        <div class="circle">STEP<br>2</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <h4>プロフィールを入力する</h4>
+        <p>日本語ネイティブであることや、対応できる仕事内容を記載します。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">
+        <div class="circle">STEP<br>3</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <h4>日本語の案件を検索する</h4>
+        <p>検索ワードを使い、音声録音や文章確認などの仕事を探します。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">
+        <div class="circle">STEP<br>4</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <h4>仕事内容と条件を確認する</h4>
+        <p>報酬だけでなく、作業内容・作業時間・納期・必要な機材などを確認します。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">
+        <div class="circle">STEP<br>5</div>
+      </div>
+      <div class="step-content">
+        <h4>応募して、契約後に作業する</h4>
+        <p>正式に契約されてから作業を開始し、指定された方法で納品します。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">
+      <span class="small">はじめる前に</span>
+      応募前に確認すること
+    </h2>
+    <div class="checklist">
+      <ul>
+        <li>仕事内容が具体的に書かれているか</li>
+        <li>作業時間と報酬が見合っているか</li>
+        <li>自分が応募条件を満たしているか</li>
+        <li>クライアントの評価や実績があるか</li>
+        <li>契約前に大量の無料作業を求められていないか</li>
+        <li>外部のSNSやメッセージアプリへ誘導されていないか</li>
+        <li>やり取りや報酬の支払いがUpwork内で行われるか</li>
+      </ul>
+      <p class="caution">仕事内容が曖昧な案件や、極端に高い報酬を提示する案件には注意してください。</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <div class="final-box">
+    <h3>日本語は、海外で活かせるスキルのひとつです</h3>
+    <p>特別な資格や経験がなくても、応募できる案件はあります。</p>
+    <p>ただし、登録すれば必ず仕事が取れるわけではありません。</p>
+    <p>まずは<a href="https://www.upwork.com/" target="_blank" rel="noopener" style="color:var(--salmon-deep);font-weight:700;text-decoration:underline;">Upwork</a>で案件を検索して、仕事内容や条件を確認するところから始めてみましょう。</p>
+    <p>翻訳機能やChatGPTを活用しながら、<span class="highlight">自分にできそうな案件を少しずつ</span>探してみてください。</p>
+
+    <p class="disclaimer">※掲載している報酬額は一例です。実際の報酬は、作業内容・募集条件・為替・手数料などによって異なります。収入を保証するものではありません。</p>
+  </div>
+
+</div>
+
+<script>
+function copyTerm(el){
+  var text = el.querySelector('span').textContent;
+  var badge = el.querySelector('.copy-badge');
+  var original = badge.textContent;
+
+  function done(){
+    el.classList.add('copied');
+    badge.textContent = 'コピーしました';
+    setTimeout(function(){
+      el.classList.remove('copied');
+      badge.textContent = original;
+    }, 1500);
+  }
+
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text, done); });
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, cb){
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+  cb();
+}
+</script>
+</body>
+</html>
