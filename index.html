@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBEAE4">
+<title>ちはるの参考資料まとめ｜AIとSNSのはじめ方</title>
+<meta name="description" content="Instagramでお届けしてきたAI・SNSの参考資料を、ひとつにまとめました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBEAE4; --salmon:#F6CFC3; --salmon-deep:#EBB3A3;
+  --accent:#E06A4C; --accent-dark:#B9503A; --accent-soft:#FCE3DA;
+  --brown:#4A3128; --brown-sub:#5F473D; --white:#FFFFFF;
+  --line:rgba(160,80,60,.14); --shadow:0 18px 45px rgba(150,70,50,.12);
+  --radius:26px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--paper)}
+body{margin:0;color:var(--brown);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Meiryo",sans-serif;
+  font-size:18px;line-height:1.9;font-weight:500;-webkit-text-size-adjust:100%;word-break:auto-phrase;line-break:strict;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(246,207,195,.9), transparent 26rem),
+    radial-gradient(circle at 100% 30%, rgba(224,106,76,.10), transparent 24rem),
+    var(--paper);}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+.container{width:min(1080px,calc(100% - 36px));margin:0 auto}
+.nb{display:inline-block}
+.mincho{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif}
+
+/* ===== ヒーロー ===== */
+.hero{position:relative;overflow:hidden;padding:20px 0 56px}
+.hero::before{content:"";position:absolute;top:-200px;right:-200px;width:520px;height:520px;border-radius:50%;
+  border:1px solid var(--line);box-shadow:0 0 0 44px rgba(224,106,76,.03),0 0 0 96px rgba(224,106,76,.02);pointer-events:none}
+.mini-header{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:2;min-height:44px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:900;letter-spacing:.04em}
+.brand::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(224,106,76,.15)}
+.update{font-size:14px;font-weight:700;color:var(--brown-sub);display:none}
+.brand{white-space:nowrap}
+.hero-grid{display:grid;gap:30px;align-items:center;position:relative;z-index:1;margin-top:22px}
+.portrait{order:-1;position:relative;display:grid;place-items:center;min-height:300px}
+.portrait::before{content:"";position:absolute;width:280px;height:280px;border-radius:46% 54% 51% 49%/57% 43% 57% 43%;
+  background:linear-gradient(145deg,rgba(224,106,76,.22),rgba(246,207,195,.9));transform:rotate(-8deg)}
+.portrait-card{position:relative;width:min(250px,70vw);aspect-ratio:1;border-radius:50%;padding:10px;background:rgba(255,255,255,.75);
+  box-shadow:0 26px 60px rgba(150,70,50,.18);transform:rotate(2deg)}
+.portrait-card .photo{width:100%;height:100%;border-radius:50%;background:linear-gradient(160deg,#FFF6F2,#FCE3DA);
+  display:grid;place-items:center;overflow:hidden}
+.portrait-card .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait-card .photo span{font-family:"Zen Old Mincho",serif;font-size:96px;font-weight:900;color:var(--accent)}
+.portrait-label{position:absolute;right:max(4px,calc(50% - 175px));bottom:24px;background:var(--white);border-radius:16px;
+  padding:10px 16px;font-size:16px;font-weight:900;box-shadow:0 12px 30px rgba(150,70,50,.14);transform:rotate(-4deg)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.8);
+  border:1px solid var(--line);color:var(--accent-dark);font-size:15px;font-weight:900;margin-bottom:18px}
+.eyebrow b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px}
+h1{margin:0;font-family:"Zen Old Mincho","Hiragino Mincho ProN",serif;font-weight:900;
+  font-size:clamp(36px,9vw,64px);line-height:1.35;letter-spacing:.01em;color:#3E2820}
+h1 em{font-style:normal;color:var(--accent);position:relative;z-index:0;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;border-radius:999px;background:rgba(246,207,195,.95);z-index:-1;transform:rotate(-1deg)}
+.hero-lead{margin:22px 0 0;font-size:19px;line-height:2;color:var(--brown-sub)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:0 26px;border-radius:999px;background:var(--accent);color:#fff;
+  text-decoration:none;font-size:19px;font-weight:900;box-shadow:0 14px 30px rgba(224,106,76,.28);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--accent-dark)}
+.btn i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);font-style:normal}
+.sub-note{font-size:15px;font-weight:700;color:var(--brown-sub)}
+
+/* ===== プロフィール ===== */
+.profile{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.9);
+  border-radius:22px;padding:18px 20px;box-shadow:var(--shadow);text-decoration:none;margin-top:32px}
+.profile .av{flex:0 0 58px;height:58px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;
+  font-family:"Zen Old Mincho",serif;font-weight:900;font-size:26px;color:var(--accent)}
+.profile .small{font-size:14px;font-weight:700;color:var(--accent-dark);margin:0}
+.profile .name{font-size:22px;font-weight:900;margin:0;line-height:1.4}
+.profile .meta{font-size:15px;margin:2px 0 0;color:var(--brown-sub);line-height:1.6}
+.profile .arrow{margin-left:auto;font-size:22px;color:var(--accent)}
+
+/* ===== 検索・絞り込み ===== */
+main{padding-bottom:40px}
+.tool-panel{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:24px;padding:18px;box-shadow:var(--shadow);margin-bottom:36px}
+.search{position:relative}
+.search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--brown-sub)}
+.search input{width:100%;min-height:60px;border-radius:16px;border:2px solid var(--salmon);background:#fff;padding:0 18px 0 52px;font-size:18px;outline:none}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:#8A6E64}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chips button{min-height:50px;padding:0 20px;border-radius:999px;border:2px solid var(--salmon);background:#fff;font-size:17px;font-weight:700;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin:0 0 18px}
+.section-head h2{margin:0;font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(28px,6.5vw,40px);line-height:1.35}
+.count{font-size:16px;font-weight:700;color:var(--brown-sub);white-space:nowrap}
+
+/* ===== カード ===== */
+.cards{display:grid;gap:22px;grid-template-columns:1fr}
+.card{display:flex;flex-direction:column;background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  text-decoration:none;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 24px 55px rgba(150,70,50,.18)}
+.thumb{position:relative;aspect-ratio:16/8;display:grid;place-items:center;overflow:hidden}
+.thumb.g1{background:linear-gradient(135deg,#FCE3DA 0%,#F6CFC3 100%)}
+.thumb.g2{background:linear-gradient(135deg,#FFF1E6 0%,#F9D7C2 100%)}
+.thumb.g3{background:linear-gradient(135deg,#F9E4E8 0%,#F2C6CC 100%)}
+.thumb::before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.45);right:-40px;top:-60px}
+.thumb::after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.35);left:-30px;bottom:-50px}
+.thumb .icon{position:relative;z-index:1;width:92px;height:92px;border-radius:26px;background:rgba(255,255,255,.9);display:grid;place-items:center;
+  font-size:48px;box-shadow:0 12px 28px rgba(150,70,50,.15);transform:rotate(-4deg)}
+.badge{position:absolute;z-index:2;top:14px;left:14px;background:var(--brown);color:#fff;font-size:14px;font-weight:900;
+  padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+.cat{position:absolute;z-index:2;top:14px;right:14px;background:rgba(255,255,255,.92);color:var(--accent-dark);font-size:14px;font-weight:900;padding:5px 12px;border-radius:999px}
+.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card-title{margin:0;font-size:22px;font-weight:900;line-height:1.55}
+.card-desc{margin:8px 0 14px;font-size:17px;line-height:1.85;color:var(--brown-sub)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tags span{font-size:14px;font-weight:700;background:var(--accent-soft);color:var(--accent-dark);padding:3px 12px;border-radius:999px}
+.card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px}
+.card-foot b{font-size:18px;font-weight:900}
+.card-foot i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;font-style:normal;font-size:20px}
+.empty{display:none;text-align:center;background:#fff;border-radius:20px;padding:28px;font-size:18px}
+
+/* ===== むすび・LINE ===== */
+.closing{margin:56px 0 0;border-radius:30px;padding:40px 26px;color:#fff;text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#5A3A2F 0%,#3E2820 100%)}
+.closing::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(224,106,76,.25);right:-90px;top:-90px}
+.closing>*{position:relative}
+.closing .ic{display:inline-grid;place-items:center;width:58px;height:58px;border-radius:18px;background:rgba(255,255,255,.12);font-size:28px;margin-bottom:14px}
+.closing h2{margin:0 0 14px;font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(26px,6.4vw,36px);line-height:1.5}
+.closing p{margin:0;font-size:18px;line-height:2;color:#F7E4DD}
+.closing .em{color:#FFB39E;font-weight:900}
+.line-box{margin-top:28px;background:#fff;color:var(--brown);border-radius:22px;padding:24px 20px}
+.line-box p{color:var(--brown-sub);margin:0 0 16px;font-size:17px}
+.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:420px;min-height:62px;border-radius:999px;
+  background:#06C755;color:#fff;text-decoration:none;font-size:19px;font-weight:900;box-shadow:0 12px 26px rgba(6,199,85,.28)}
+
+footer{text-align:center;padding:40px 20px 44px;font-size:15px;color:var(--brown-sub)}
+footer a{font-weight:900;text-decoration:none;color:var(--brown);font-size:17px}
+footer p{margin:6px 0}
+
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+
+@media (min-width:760px){
+  .update{display:inline}
+  .hero{padding-bottom:72px}
+  .hero-grid{grid-template-columns:1.2fr .8fr;gap:50px;min-height:480px}
+  .portrait{order:0;min-height:420px}
+  .portrait::before{width:360px;height:360px}
+  .portrait-card{width:320px}
+  .tool-panel{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+  .chips{margin-top:0}
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1040px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="mini-header">
+      <span class="brand">ちはるの参考資料まとめ</span>
+      <span class="update">新しい資料も順次追加</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><b>✓</b>Instagramでお届けしてきた資料</div>
+        <h1><span class="nb">これまでの</span><span class="nb"><em>参考資料</em>を</span><br><span class="nb">ひとつに</span><span class="nb">まとめました</span></h1>
+        <p class="hero-lead"><span class="nb">AIの使い方や、</span><span class="nb">暮らしの選択肢を増やすヒントを、</span><span class="nb">ここからいつでも見返せます。</span><br><span class="nb">まずは知るところから、</span><span class="nb">気になるものを開いてみてね。</span></p>
+        <div class="hero-actions">
+          <a class="btn" href="#list">資料の一覧を見る <i>↓</i></a>
+          <span class="sub-note">内容は今後も増えていきます</span>
+        </div>
+      </div>
+
+      <div class="portrait" aria-hidden="true">
+        <div class="portrait-card">
+          <!-- 写真に変える時は、下の span を <img src="写真のファイル名.jpg" alt=""> に置きかえます -->
+          <div class="photo"><span>ち</span></div>
+        </div>
+        <div class="portrait-label">ちはるです🌸</div>
+      </div>
+    </div>
+
+    <a class="profile" href="https://www.instagram.com/chiharu_ai_insta/" target="_blank" rel="noopener">
+      <div class="av" aria-hidden="true">ち</div>
+      <div>
+        <p class="small">50代・60代のAIとSNS</p>
+        <p class="name">ちはる</p>
+        <p class="meta"><span class="nb">美容師40年・</span><span class="nb">自分のサロン36年</span><br><span class="nb">@chiharu_ai_insta</span></p>
+      </div>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+  </div>
+</header>
+
+<main id="list">
+  <div class="container">
+    <div class="tool-panel">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="q" type="search" placeholder="資料の名前や言葉で探す" aria-label="資料を探す">
+      </label>
+      <div class="chips" role="group" aria-label="グループで絞り込む">
+        <button type="button" data-f="all" aria-pressed="true">すべて</button>
+        <button type="button" data-f="g1" aria-pressed="false">AIの使い方</button>
+        <button type="button" data-f="g2" aria-pressed="false">AIで作る</button>
+        <button type="button" data-f="g3" aria-pressed="false">発信と働き方</button>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>参考資料の一覧</h2>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="cards" id="cards"></div>
+    <p class="empty" id="empty">見つかりませんでした。<br>別の言葉で探してみてね。</p>
+
+    <section class="closing">
+      <div class="ic" aria-hidden="true">☕</div>
+      <h2><span class="nb">気になったものから、</span><br><span class="nb">ひとつ開いてみてね。</span></h2>
+      <p><span class="nb">全部やらなくて大丈夫です。</span><br><span class="nb"><span class="em">無理なくできるところから</span>、</span><span class="nb">今の暮らしに合わせて</span><span class="nb">使ってくださいね。</span></p>
+      <div class="line-box">
+        <p><span class="nb">新しい資料や、</span><span class="nb">AIとSNSのお知らせは</span><span class="nb">公式LINEでお届けしています。</span></p>
+        <a class="line-btn" href="https://utage-system.com/line/open/MKRjXKSAO8An?mtid=7Yo2jmwERLvm" target="_blank" rel="noopener">公式LINEを見てみる</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p><a href="https://www.instagram.com/chiharu_ai_insta/" target="_blank" rel="noopener">Instagram：@chiharu_ai_insta</a></p>
+  <p>© 2026 ちはる</p>
+</footer>
+
+<script>
+const GH="https://jijibebechiharru-jpg.github.io/-symbols-guide/";
+const CAT={g1:"AIの使い方",g2:"AIで作る",g3:"発信と働き方"};
+const ITEMS=[
+ ["g1","🌱","ChatGPT安心ガイド","はじめてでも安心して使うためのポイントをまとめました。",["はじめて","ChatGPT"],GH+"chatgpt-anshin-single.html"],
+ ["g1","✨","ChatGPT新機能まとめ","新しくできるようになったことを、わかりやすく整理しました。",["ChatGPT","新機能"],GH+"chatgpt-newfeatures-combined.html"],
+ ["g1","🖼️","ChatGPT 画像の入力例25選","画像を作るときに、そのまま使える入力例です。",["画像","コピペOK"],"https://chatgpt-image-input-25.jijibebechiharru.chatgpt.site"],
+ ["g1","📄","ChatGPT Sitesテンプレ集","ChatGPTでページを作るときのひな形です。",["ページ作り","テンプレ"],"https://chiharu-chatgpt-sites-guide.jijibebechiharru.chatgpt.site"],
+ ["g1","🎨","Claude×Canva 連携ガイド","ClaudeとCanvaをつないで使う手順です。",["Claude","Canva"],"https://claude-canva-guide.jijibebechiharru.chatgpt.site"],
+ ["g1","☕","Manus カフェサイト＆診断ツール","Manusでサイトや診断ツールを作る流れです。",["Manus","サイト作り"],"https://manus-cafe-diagnosis-guide.jijibebechiharru.chatgpt.site"],
+ ["g2","📚","AI絵本づくりガイド","AIで絵本を作る手順をまとめました。",["絵本","画像"],GH+"ai-ehon-combined-full.html"],
+ ["g2","🎬","ChatCutの始め方＆動画編集指示文","動画編集をAIにお願いするときの指示文つきです。",["動画","指示文つき"],"https://chatcut-free-guide.jijibebechiharru.chatgpt.site"],
+ ["g2","💬","AIで作るLINE絵文字","自分だけのLINE絵文字をAIで作る方法です。",["LINE絵文字","画像"],"https://line-emoji-guide.jijibebechiharru.chatgpt.site"],
+ ["g2","🌀","動くLINE絵文字の作り方","絵文字を動かす手順をまとめました。",["LINE絵文字","動き"],"https://moving-line-emoji-guide.jijibebechiharru.chatgpt.site"],
+ ["g2","💄","パーソナルカラー診断プロンプト","AIで自分に似合う色を知るための入力文です。",["おしゃれ","コピペOK"],GH+"personal-color-prompt.html"],
+ ["g2","👤","SNSアイコン作りガイド","SNSのアイコンをAIで作る方法です。",["アイコン","画像"],GH+"sns_icon_guide.html"],
+ ["g2","🪄","Akoolで変身ガイド","AIで自分の写真を変身させる方法です。",["写真","変身"],"https://akool-henshin-guide.jijibebechiharru.chatgpt.site"],
+ ["g2","✍️","記号の使い方ガイド","投稿が見やすくなる記号の使い方です。",["投稿","見やすさ"],GH+"symbols_with_cta.html"],
+ ["g3","📌","Pinterest活用ガイド","Pinterestでの発信の始め方です。",["Pinterest","発信"],GH+"pinterest-guide-lp.html"],
+ ["g3","🌍","Substack 海外発信ガイド","海外に向けて文章を届ける方法です。",["海外","文章"],"https://chiharu-substack-world-guide.jijibebechiharru.chatgpt.site"],
+ ["g3","⛩️","和風画像 海外販売スタートガイド","和風の画像を海外で販売する始め方です。",["海外","画像"],"https://wafu-image-overseas-guide.jijibebechiharru.chatgpt.site"],
+ ["g3","💻","AI×SNS 海外のお仕事紹介","Upworkで海外のお仕事を探す方法です。",["海外","在宅"],GH+"ai-sns-upwork-combined.html"],
+ ["g3","🏷️","AIデジタルステッカーガイド","AIで作ったステッカーを販売する始め方です。",["ステッカー","ネット販売"],"https://jijibebechiharru-jpg.github.io/sticker-guide-/combined_final.html"],
+ ["g3","🐾","ペットグッズ販売ガイド","ペットグッズ販売の仕組みをまとめました。",["ペット","ネット販売"],GH+"pet-goods-dropshipping-guide.html"]
+];
+const box=document.getElementById("cards"), countEl=document.getElementById("count"), empty=document.getElementById("empty");
+box.innerHTML=ITEMS.map((it,i)=>{const [g,ic,t,d,tags,u]=it;const no=String(i+1).padStart(2,"0");
+ return `<a class="card" href="${u}" target="_blank" rel="noopener" data-g="${g}" data-text="${(t+d+tags.join("")+CAT[g]).toLowerCase()}">
+  <div class="thumb ${g}"><span class="badge">資料 ${no}</span><span class="cat">${CAT[g]}</span><span class="icon" aria-hidden="true">${ic}</span></div>
+  <div class="card-body"><h3 class="card-title">${t}</h3><p class="card-desc">${d}</p>
+   <div class="tags">${tags.map(x=>`<span>${x}</span>`).join("")}</div>
+   <div class="card-foot"><b>この資料を見る</b><i aria-hidden="true">→</i></div></div></a>`}).join("");
+let f="all";
+function update(){const q=document.getElementById("q").value.trim().toLowerCase();let n=0;
+ document.querySelectorAll(".card").forEach(c=>{const ok=(f==="all"||c.dataset.g===f)&&(!q||c.dataset.text.includes(q));c.hidden=!ok;if(ok)n++;});
+ countEl.textContent=n+"件";empty.style.display=n?"none":"block";}
+document.querySelectorAll(".chips button").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".chips button").forEach(x=>x.setAttribute("aria-pressed",x===b));f=b.dataset.f;update();}));
+document.getElementById("q").addEventListener("input",update);
+update();
+</script>
+</body>
+</html>
