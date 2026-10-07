@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChatGPT安心設定4選（1枚まとめ）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
@@ -185,11 +186,48 @@
   .lead-title { font-size:38px; font-weight:700; color:#4a3a34; line-height:1.6; }
   .lead-text { font-size:28px; font-weight:500; color:#6b5548; line-height:1.8; margin-top:12px; }
 
-  /* スマホ・タブレット（タッチ操作の端末）では文字を大きめに */
-  @media (pointer: coarse) {
-    .lead-block { padding:64px 48px 36px; }
-    .lead-title { font-size:54px; }
-    .lead-text { font-size:42px; }
+  /* スマホ表示（画面幅600px以下） */
+  @media (max-width: 600px) {
+    body { padding:0; }
+    body > .canvas + .canvas { margin-top:16px !important; }
+
+    .inner { padding:36px 18px 40px; }
+
+    .eyebrow { font-size:16px; letter-spacing:2px; margin-bottom:8px; }
+    .title { font-size:22px; line-height:1.5; }
+    .title .accent { text-decoration-thickness:3px; text-underline-offset:5px; }
+    .sub { font-size:20px; margin-bottom:24px; }
+    .inner > a { margin-bottom:28px !important; }
+
+    .list { gap:12px; margin-bottom:28px; }
+    .item { gap:14px; padding:18px 16px; border-radius:14px; align-items:flex-start; }
+    .num { width:40px; height:40px; font-size:20px; }
+    .item-title { font-size:20px; }
+    .item-title .u { text-decoration-thickness:2px; text-underline-offset:4px; }
+    .item-desc { font-size:16px; margin-top:4px; }
+
+    .check-title { font-size:20px; margin-bottom:12px; }
+    .check-list { gap:10px; margin-bottom:32px; }
+    .check-item { gap:12px; padding:14px 16px; border-radius:12px; }
+    .check-box { width:22px; height:22px; border-width:2px; border-radius:6px; }
+    .check-text { font-size:16px; }
+
+    .cta-box { padding:24px 18px; border-radius:16px; }
+    .cta-box[style] { margin-bottom:28px !important; }
+    .cta-title { font-size:22px; margin-bottom:12px; }
+    .cta-title[style] { font-size:20px !important; }
+    .cta-body { font-size:16px; line-height:1.85; margin-bottom:20px; }
+    .cta-button { padding:16px; border-radius:12px; }
+    .cta-button-text { font-size:18px; }
+
+    .lead-block { padding:32px 18px 20px; }
+    .lead-title { font-size:22px; }
+    .lead-text { font-size:16px; margin-top:8px; }
+
+    /* 対応ブラウザでは、言葉の切れ目で改行して行の長さをそろえる */
+    @supports (word-break: auto-phrase) {
+      .title, .lead-title, .lead-text { word-break:auto-phrase; text-wrap:balance; }
+    }
   }
 </style>
 </head>
