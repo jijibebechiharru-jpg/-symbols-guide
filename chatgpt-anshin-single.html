@@ -229,6 +229,47 @@
       .title, .lead-title, .lead-text { word-break:auto-phrase; text-wrap:balance; }
     }
   }
+
+  /* ===== 配布資料の共通サイズ（PC：画面幅601px以上） ===== */
+  @media (min-width: 601px) {
+    .canvas { max-width: 760px; }
+    .inner { padding: 56px 40px 64px; }
+    .eyebrow { font-size: 18px; letter-spacing: 2px; margin-bottom: 12px; }
+    .title { font-size: 32px; }
+    .title .accent { text-decoration-thickness: 3px; text-underline-offset: 5px; }
+    .sub { font-size: 20px; margin-bottom: 28px; }
+    .inner > a { margin-bottom: 40px !important; }
+
+    .list { gap: 16px; margin-bottom: 40px; }
+    .item { gap: 20px; padding: 22px 24px; border-radius: 16px; }
+    .num { width: 52px; height: 52px; font-size: 24px; }
+    .item-title { font-size: 21px; }
+    .item-title .u { text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    .item-desc { font-size: 17px; }
+
+    .check-title { font-size: 21px; margin-bottom: 16px; }
+    .check-list { gap: 10px; margin-bottom: 44px; }
+    .check-item { padding: 16px 20px; }
+    .check-box { width: 24px; height: 24px; }
+    .check-text { font-size: 17px; }
+
+    .cta-box { padding: 32px 28px; }
+    .cta-box[style] { margin-bottom: 40px !important; }
+    .cta-title, .cta-title[style] { font-size: 22px !important; }
+    .cta-body { font-size: 17px; }
+    .cta-button { padding: 18px; }
+    .cta-button-text { font-size: 18px; }
+
+    .lead-block { padding: 44px 40px 24px; }
+    body > .canvas + .canvas { padding: 0 40px 40px; }
+    .lead-title { font-size: 24px; }
+    .lead-text { font-size: 17px; }
+  }
+
+  /* 下部の画像も題名下のバナーと同じ幅にそろえる（スマホ） */
+  @media (max-width: 600px) {
+    body > .canvas + .canvas { padding: 0 18px 24px; }
+  }
 </style>
 </head>
 <body>
