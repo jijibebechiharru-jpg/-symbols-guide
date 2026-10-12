@@ -294,6 +294,36 @@
 
   /* スマホ表示の文字サイズ・余白調整（画面幅600px以下） */
   body > .tb-banner { margin-bottom: 18px; }
+
+  /* ===== 配布資料の共通サイズ（PC：画面幅601px以上） ===== */
+  @media (min-width: 601px) {
+    body { max-width: 760px; padding-left: 40px; padding-right: 40px; }
+    h1 { font-size: 32px; }
+    .step-title { font-size: 21px; }
+    p.lead { font-size: 18px; }
+    li, .cta p { font-size: 17px; }
+  }
+
+  /* ===== 配布資料の共通サイズ（スマホ：画面幅600px以下） ===== */
+  /* 教科書バナーと下部の画像を、画面の左右18pxの位置にそろえる */
+  @media (max-width: 600px) {
+    .tb-banner, .tb-bottom {
+      width: auto; max-width: none;
+      margin-left: calc(50% - 50vw + 18px) !important;
+      margin-right: calc(50% - 50vw + 18px) !important;
+    }
+    .tb-bottom .tb-banner { margin-left: 0 !important; margin-right: 0 !important; }
+  }
+
+  /* 教科書バナーと下部の画像を、PCでは幅680pxにそろえる */
+  @media (min-width: 601px) {
+    .tb-banner, .tb-bottom {
+      width: 680px; max-width: 680px;
+      margin-left: calc(50% - 340px) !important;
+      margin-right: calc(50% - 340px) !important;
+    }
+    .tb-bottom .tb-banner { width: auto; max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
+  }
 </style>
 </head>
 <body>

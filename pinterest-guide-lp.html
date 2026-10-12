@@ -528,6 +528,37 @@
   @media (max-width: 600px) {
     body .cover h1 .accent { font-size: 27px; }
   }
+
+  /* ===== 配布資料の共通サイズ（PC：画面幅601px以上） ===== */
+  @media (min-width: 601px) {
+    .cover h1 { font-size: 32px; }
+    .cover h1 .accent { font-size: 34px; }
+    h2.section-title, h2.section-title[style] { font-size: 24px !important; }
+    .step-title { font-size: 21px; }
+    .wrap p, .wrap li, .wrap p[style], .keyword-box, .flow-mini, .flow-final, .prompt-text { font-size: 17px !important; }
+    .wrap p.lead { font-size: 18px !important; }
+  }
+
+  /* ===== 配布資料の共通サイズ（スマホ：画面幅600px以下） ===== */
+  /* 教科書バナーと下部の画像を、画面の左右18pxの位置にそろえる */
+  @media (max-width: 600px) {
+    .tb-banner, .tb-bottom {
+      width: auto; max-width: none;
+      margin-left: calc(50% - 50vw + 18px) !important;
+      margin-right: calc(50% - 50vw + 18px) !important;
+    }
+    .tb-bottom .tb-banner { margin-left: 0 !important; margin-right: 0 !important; }
+  }
+
+  /* 教科書バナーと下部の画像を、PCでは幅680pxにそろえる */
+  @media (min-width: 601px) {
+    .tb-banner, .tb-bottom {
+      width: 680px; max-width: 680px;
+      margin-left: calc(50% - 340px) !important;
+      margin-right: calc(50% - 340px) !important;
+    }
+    .tb-bottom .tb-banner { width: auto; max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
+  }
 </style>
 </head>
 <body>
